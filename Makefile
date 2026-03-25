@@ -4,3 +4,6 @@ build:
 
 flash:
 	avrdude -p m328p -c arduino_as_isp -P /dev/cu.usbmodem1401 -b 19200 -U flash:w:main.hex:i -F
+
+ping:
+	avrdude -p m328pb -c arduino_as_isp -P /dev/cu.usbmodem1401 -b 19200 -v
