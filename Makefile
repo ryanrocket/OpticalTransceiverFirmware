@@ -1,6 +1,6 @@
 # = = Configurable parameters
 PROGRAMMER	?= arduino_as_isp
-PORT		?= /dev/cu.usbmodem1401
+PORT		?= /dev/cu.usbmodem11301
 BAUD		?= 19200
 F_CPU		?= 1000000UL
 
@@ -49,10 +49,10 @@ flash-rx: rx
 
 # = = Utility
 ping-tx:
-	$(AVRDUDE) -p $(DUDE_MCU_tx) -c $(PROGRAMMER) -p $(PORT) -b $(BAUD) -v
+	$(AVRDUDE) -p $(DUDE_MCU_tx) -c $(PROGRAMMER) -P $(PORT) -b $(BAUD) -v
 
 ping-rx:
-	$(AVRDUDE) -p $(DUDE_MCU_rx) -c $(PROGRAMMER) -p $(PORT) -b $(BAUD) -v
+	$(AVRDUDE) -p $(DUDE_MCU_rx) -c $(PROGRAMMER) -P $(PORT) -b $(BAUD) -v
 
 clean:
 	rm -rf *.elf *.hex
