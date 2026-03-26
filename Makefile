@@ -12,9 +12,9 @@ CFLAGS		= -DF_CPU=$(F_CPU) -Os
 
 # = = Targets
 TARGETS	= tx rx
-MCU_tx	= atmega328pb
+MCU_tx	= atmega328p
 MCU_rx	= attiny25
-DUDE_MCU_tx	= m328pb
+DUDE_MCU_tx	= m328p
 DUDE_MCU_rx	= t25
 
 # Sources
