@@ -1,6 +1,6 @@
 # = = Configurable parameters
 PROGRAMMER	?= arduino_as_isp
-PORT		?= /dev/cu.usbmodem11301
+PORT		?= /dev/cu.usbmodem1401
 BAUD		?= 19200
 F_CPU		?= 1000000UL
 
@@ -18,7 +18,7 @@ DUDE_MCU_tx	= m328p
 DUDE_MCU_rx	= t25
 
 # Sources
-SRC_tx = tx.c
+SRC_tx = tx.c tx_diag.c
 SRC_rx = rx.c
 
 # Outputs
